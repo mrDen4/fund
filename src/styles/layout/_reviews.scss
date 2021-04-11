@@ -1,0 +1,100 @@
+.reviews {
+    padding-bottom: 150px;
+    background: url('../images/reviews-bg.png') no-repeat;
+    background-size: cover;
+
+    .reviews__top {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 70px;
+        z-index: 2;
+
+        .top__line {
+            border-bottom: 1px solid $gray;
+            height: 30px;
+            width: 70%;
+        }
+    }
+
+    .reviews__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .arrow__btn {
+            background: none;
+            border: none;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: .3s;
+            outline: none;
+
+            &--right {
+                background: url('../images/slider/arrow-right.svg') no-repeat center center;
+
+                &:hover {
+                    background: url('../images/slider/arrow-right-active.svg') no-repeat center center;
+                }
+            }
+
+            &--left {
+                background: url('../images/slider/arrow-left.svg') no-repeat center center;
+                margin-right: 50px;
+
+                &:hover {
+                    background: url('../images/slider/arrow-left-active.svg') no-repeat center center;
+                }
+            }
+        }
+    }
+
+    .reviews__slider {
+        .slider__slide {
+            display: flex !important;
+            justify-content: space-between;
+
+            .slide__content {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .slide__subtitle {
+                margin: 0 0 30px 0;
+            }
+
+            .slide__text {
+                margin: 0;
+            }
+
+            .content__btns {
+                display: flex;
+
+                .slider__btn {
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                    outline: none;
+                    margin-right: 60px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .slide__img {
+                width: 30%;
+
+                .img__img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

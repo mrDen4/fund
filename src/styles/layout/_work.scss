@@ -1,0 +1,99 @@
+.work {
+    .work__top {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 70px;
+
+        .top__line {
+            border-bottom: 1px solid $gray;
+            height: 30px;
+            width: 60%;
+            z-index: 2;
+
+        }
+
+        .top__link {
+            color: $blue;
+            font-size: 18px;
+            text-decoration: none;
+            transition: .3s;
+            z-index: 2;
+
+
+            &:hover {
+                color: $blue-hover;
+            }
+        }
+    }
+
+    .work__slider {
+        margin-bottom: 60px;
+        width: 100%;
+        display: flex;
+        z-index: 2;
+
+        .work__slide {
+            display: flex !important;
+            justify-content: space-between;
+        }
+
+        .slide__content {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .slide__title {
+                font-size: 24px;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            .slide__text {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .slide__btn {
+                text-decoration: none;
+            }
+        }
+    }
+    .wrap-slider__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .arrow__btn {
+            background: none;
+            border: none;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: .3s;
+            outline: none;
+
+            &--right {
+                background: url('../images/slider/arrow-right.svg') no-repeat center center;
+
+                &:hover {
+                    background: url('../images/slider/arrow-right-active.svg') no-repeat center center;
+                }
+            }
+
+            &--left {
+                background: url('../images/slider/arrow-left.svg') no-repeat center center;
+                margin-right: 50px;
+
+                &:hover {
+                    background: url('../images/slider/arrow-left-active.svg') no-repeat center center;
+                }
+            }
+        }
+    }
+}

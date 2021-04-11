@@ -1,0 +1,114 @@
+.footer {
+    background: #78FFD6;
+    padding: 90px 0;
+
+    .footer__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    .top__menu {
+        display: flex;
+
+        .menu__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .list__item {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .item__link {
+            color: $gray;
+            text-decoration: none;
+        }
+    }
+
+    .top__about {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .about__text {
+            margin: 0;
+
+            .text__bold {
+                font-weight: bold;
+            }
+        }
+
+        .about__phones {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phones__link {
+            color: $gray;
+            text-decoration: none;
+        }
+
+        .socials__link {
+            text-decoration: none;
+            margin-right: 30px;
+        }
+    }
+
+    .top__out {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .out__link {
+        background: url('../images/arrow-top.svg');
+        width: 60px;
+        height: 60px;
+        transition: .3s;
+
+        &:hover {
+            background: url('../images/arrow-top-active.svg');
+        }
+    }
+
+    .footer__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #3C67CA;
+    }
+
+    .bottom__subtitle {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .bottom__list {
+        display: flex;
+
+        .list__item {
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .item__link {
+            color: $blue-hover;
+            text-decoration: none;
+            font-size: 14px;
+            transition: .3s;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}

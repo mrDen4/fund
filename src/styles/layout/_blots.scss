@@ -1,0 +1,19 @@
+.blot-right {
+    position: absolute;
+    top: 1100px;
+    right: 0;
+    width: 45%;
+    height: 1369px;
+    background: url('../images/blot-right.png') no-repeat no-repeat;
+    z-index: 1;
+}
+
+.blot-left {
+    position: absolute;
+    top: 2488px;
+    left: -89px;
+    width: 40%;
+    height: 2350px;
+    background: url('../images/blot-left.png') no-repeat no-repeat;
+    z-index: 1;
+}

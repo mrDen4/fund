@@ -1,0 +1,50 @@
+.help {
+
+    .help__container {
+        align-items: flex-end;
+    }
+
+    .help__top {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 70px;
+
+        .top__line {
+            border-bottom: 1px solid $gray;
+            height: 30px;
+            width: 70%;
+        }
+    }
+
+    .help__list {
+        display: flex;
+        justify-content: space-between;
+
+        .list__item {
+            width: 30%;
+        }
+
+        .item__title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .item__list {
+            padding-left: 5px;
+            
+            .list__item {
+                &:before {
+                    content: "—";
+                    position: relative;
+                    left: -5px;
+                }
+
+                width: 100%;
+                font-size: 18px;
+            }
+        }
+    }
+}

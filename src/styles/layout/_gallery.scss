@@ -1,0 +1,104 @@
+.gallery {
+    .gallery__top {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 70px;
+        z-index: 2;
+
+        .top__line {
+            border-bottom: 1px solid $gray;
+            height: 30px;
+            width: 60%;
+        }
+
+        .gallery__arrows {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .arrow__btn {
+                background: none;
+                border: none;
+                width: 60px;
+                height: 60px;
+                cursor: pointer;
+                transition: .3s;
+                outline: none;
+    
+                &--right {
+                    background: url('../images/slider/arrow-right.svg') no-repeat center center;
+    
+                    &:hover {
+                        background: url('../images/slider/arrow-right-active.svg') no-repeat center center;
+                    }
+                }
+    
+                &--left {
+                    background: url('../images/slider/arrow-left.svg') no-repeat center center;
+                    margin-right: 50px;
+    
+                    &:hover {
+                        background: url('../images/slider/arrow-left-active.svg') no-repeat center center;
+                    }
+                }
+            }
+        }
+    }
+
+    .gallery__slider {
+        width: 100%;
+        margin-bottom: 150px;
+        z-index: 2;
+
+        .slider__slide {
+            width: 100%;
+
+            .slide__img {
+                width: 100%;
+            }
+        }
+    }
+
+    .gallery__team {
+        display: flex;
+        justify-content: space-between;
+
+        .team__img {
+            width: 30%;
+            z-index: 2;
+        }
+
+        .team__content {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .team__subtitle {
+                margin: 0 0 30px 0;
+            }
+
+            .team__row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .text__bold {
+                font-weight: bold;
+            }
+
+            .row__btn {
+                color: $gray;
+                background: #FFEA47;
+
+                &:hover {
+                    background: #F6A832;
+                }
+            }
+        }
+    }
+}

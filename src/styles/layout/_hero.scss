@@ -1,0 +1,36 @@
+.hero {
+    padding-top: 20px;
+
+    .hero__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+    }
+    
+    .text__title {
+        .title__span {
+            font-size: 18px;
+        }
+        font-size: 36px;
+        font-family: 'Pacifico', cursive;
+        text-align: center;
+        letter-spacing: 0.05em;
+        line-height: 120%;
+        color: #1CA16A;
+    }
+
+    .hero__img {
+        width: 60%;
+
+        .img__img {
+            width: 100%;
+        }
+    }
+}
