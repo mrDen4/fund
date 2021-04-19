@@ -36,9 +36,7 @@
                         <li class="list__item"><a class="item__link" href="#">Документы</a></li>
                     </ul>
                 </nav>
-                <!-- <button class="header__menu-btn" type="button">
-                    <img class="menu-btn__img" src="./assets/images/burger.png" alt="меню">
-                </button> -->
+                <button class="header__burger" type="button"></button>
             </div>
         </header>
         <section class="section hero">
@@ -53,6 +51,7 @@
                 <div class="hero__img">
                     <img class="img__img" src="./assets/images/hero.png" alt="">
                 </div>
+                <button class="btn hero__btn hero__btn--mob">Хочу помочь</button>
             </div>
         </section>
         <section class="section help">
@@ -109,6 +108,7 @@
                             <div class="slide__img">
                                 <img src="./assets/images/work.png" alt="Поездка в г.Кашин" class="img__img">
                             </div>
+                            <a href="#" class="btn slide__btn slide__btn--mob">Читать</a>
                         </div>
                         <div class="work__slide">
                             <div class="slide__content">
@@ -191,6 +191,10 @@
                         <img src="./assets/images/gallery.png" alt="#" class="slide__img">
                     </div>
                 </div>
+                <div class="gallery__arrows gallery__arrows--mob">
+                    <button class="arrow__btn arrow__btn--left"></button>
+                    <button class="arrow__btn arrow__btn--right"></button>
+                </div>
                 <div class="gallery__team">
                     <img src="./assets/images/team.png" alt="#" class="team__img">
                     <div class="team__content">
@@ -208,6 +212,13 @@
                             </p>
                             <button class="btn row__btn">Наша команда</button>
                         </div>
+                    </div>
+                    <div class="team__row team__row--mob">
+                        <p class="row__text">
+                            <span class="text__bold">Горский Сергей Владимирович</span> <br>
+                            Директор фонда — «Социальный щит»
+                        </p>
+                        <button class="btn row__btn">Наша команда</button>
                     </div>
                 </div>
             </div>
@@ -318,20 +329,50 @@
                         <a href="#" class="out__link"></a>
                         <p class="out__text">Copyright © 2018 - 2021</p>
                     </div>
-                </div>
-                <div class="footer__bottom">
-                    <h3 class="bottom__subtitle">Наши партнеры</h3>
-                    <ul class="bottom__list">
-                        <li class="list__item"><a href="www.dolgovnet.msk.ru" class="item__link">www.dolgovnet.msk.ru</a></li>
-                        <li class="list__item"><a href="www.graspolimer.ru" class="item__link">www.graspolimer.ru</a></li>
-                        <li class="list__item"><a href="www.I-l.ru" class="item__link">www.I-l.ru</a></li>
-                        <li class="list__item"><a href="www.consultp.ru" class="item__link">www.consultp.ru</a></li>
-                        <li class="list__item"><a href="www.mhevent.ru" class="item__link">www.mhevent.ru</a></li>
-                    </ul>
+                    <div class="footer__bottom">
+                        <h3 class="bottom__subtitle">Наши партнеры</h3>
+                        <ul class="bottom__list">
+                            <li class="list__item"><a href="www.dolgovnet.msk.ru" class="item__link">www.dolgovnet.msk.ru</a></li>
+                            <li class="list__item"><a href="www.graspolimer.ru" class="item__link">www.graspolimer.ru</a></li>
+                            <li class="list__item"><a href="www.I-l.ru" class="item__link">www.I-l.ru</a></li>
+                            <li class="list__item"><a href="www.consultp.ru" class="item__link">www.consultp.ru</a></li>
+                            <li class="list__item"><a href="www.mhevent.ru" class="item__link">www.mhevent.ru</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>
-
+        <div class="menu">
+            <div class="container menu__container">
+                <a href="#" class="menu__logo">
+                    <img src="./assets/images/logo.png" alt="" class="logo__img">
+                </a>
+                <ul class="menu__list">
+                    <li class="list__item">
+                        <a href="#" class="item__link">Помогаем</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="item__link">Наша работа</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="item__link">Команда</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="item__link">Контакты</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="item__link">Финансовые отчеты</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="item__link">Сотрудничество</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="item__link">Документы</a>
+                    </li>
+                </ul>
+                <button class="menu__btn">&times;</button>
+            </div>
+        </div>
         <div class="blot-right"></div>
         <div class="blot-left"></div>
 

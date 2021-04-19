@@ -6,10 +6,21 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
+        flex-wrap: wrap;
     }
 
     .top__menu {
         display: flex;
+        width: 30%;
+
+        @include tablets() {
+            width: 45%;
+            margin-bottom: 80px;
+        }
+
+        @include phones() {
+            width: 100%;
+        }
 
         .menu__list {
             display: flex;
@@ -34,18 +45,40 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 30%;
+
+        @include tablets() {
+            width: 45%;
+            margin-bottom: 80px;
+        }
+
+        @include phones() {
+            width: 100%;
+        }
 
         .about__text {
             margin: 0;
 
+            @include phones() {
+                margin-bottom: 45px;
+            }
+
             .text__bold {
                 font-weight: bold;
+
+                @include tablets() {
+                    color: #fff;
+                }
             }
         }
 
         .about__phones {
             display: flex;
             flex-direction: column;
+
+            @include phones() {
+                margin-bottom: 45px;
+            }
         }
 
         .phones__link {
@@ -64,6 +97,17 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        width: 30%;
+
+        @include tablets() {
+            width: 45%;
+            order: 2;
+        }
+
+        @include phones() {
+            width: 100%;
+            flex-direction: row;
+        }
     }
 
     .out__link {
@@ -71,6 +115,10 @@
         width: 60px;
         height: 60px;
         transition: .3s;
+
+        @include phones() {
+            order: 2;
+        }
 
         &:hover {
             background: url('../images/arrow-top-active.svg');
@@ -82,6 +130,21 @@
         justify-content: space-between;
         align-items: center;
         color: #3C67CA;
+        width: 100%;
+        margin-top: 100px;
+
+        @include tablets() {
+            width: 45%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 0;
+        }
+
+        @include phones() {
+            width: 100%;
+            margin-bottom: 100px;
+        }
     }
 
     .bottom__subtitle {
@@ -92,11 +155,24 @@
     .bottom__list {
         display: flex;
 
+        @include tablets() {
+            flex-direction: column;
+        }
+
         .list__item {
             margin-right: 50px;
 
+            @include tablets() {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
             &:last-child {
                 margin-right: 0;
+
+                @include tablets() {
+                    margin-bottom: 0;
+                }
             }
         }
 

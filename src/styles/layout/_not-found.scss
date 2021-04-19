@@ -1,0 +1,27 @@
+.not-found {
+    padding: 100px 0;
+
+    .not-found__container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .not-found__title {
+        margin: 0 0 100px 0;
+        text-align: center;
+    }
+
+    .not-found__img {
+        margin-bottom: 100px;
+
+        @include tablets() {
+            width: 100%;
+        }
+    }
+
+    .bot-found__btn {
+        @include phones() {
+            width: 100%;
+        }
+    }
+}

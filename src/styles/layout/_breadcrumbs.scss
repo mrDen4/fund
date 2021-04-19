@@ -1,0 +1,29 @@
+.breadcrumbs {
+    padding-top: 30px;
+
+    .breadccrumbs__container {
+        @include phones() {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .breadcrumbs__list {
+        display: flex;
+    }
+
+    .breadcrumbs__item {
+        margin-right: 10px;
+        font-size: 14px;
+
+        &--active {
+            color: gray;
+        }
+    }
+
+    .item__link {
+        text-decoration: none;
+        color: $gray;
+        font-size: 14px;
+    }
+}

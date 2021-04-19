@@ -24,5 +24,13 @@ $(document).ready(function () {
             })
         
         })
-        })(jQuery)
+    })(jQuery)
+
+    $('.header__burger').on('click', function () {
+        $('.menu').addClass('menu--active');
+    });
+
+    $('.menu .menu__btn').on('click', function () {
+        $('.menu').removeClass('menu--active');
+    });
 });

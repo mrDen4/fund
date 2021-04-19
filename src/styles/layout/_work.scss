@@ -7,12 +7,29 @@
         width: 100%;
         margin-bottom: 70px;
 
+        @include phones() {
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .work__subtitle {
+            margin-bottom: 10px;
+        }
+
         .top__line {
             border-bottom: 1px solid $gray;
             height: 30px;
             width: 60%;
             z-index: 2;
 
+            @include tablets() {
+                width: 40%;
+            }
+
+            @include phones() {
+                display: none;
+            }
         }
 
         .top__link {
@@ -33,11 +50,28 @@
         margin-bottom: 60px;
         width: 100%;
         display: flex;
+        align-items: flex-start;
+        justify-content: center;
         z-index: 2;
+
+        @include phones() {
+            margin-bottom: 30px;
+        }
 
         .work__slide {
             display: flex !important;
             justify-content: space-between;
+
+            @include tablets() {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
+
+            @include phones() {
+                align-items: center;
+                justify-content: center;
+            }
         }
 
         .slide__content {
@@ -46,6 +80,11 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
+
+            @include tablets() {
+                width: 100%;
+                margin-bottom: 60px;
+            }
 
             .slide__title {
                 font-size: 24px;
@@ -57,9 +96,37 @@
                 font-size: 18px;
                 margin: 0;
             }
+        }
 
-            .slide__btn {
-                text-decoration: none;
+        .slide__img {
+
+            .img__img {
+                width: 100%;
+            }
+
+            @include tablets() {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+
+            @include phones() {
+                margin-bottom: 30px;
+            }
+        }
+
+        .slide__btn {
+            text-decoration: none;
+
+            @include tablets() {
+                display: none;
+            }
+
+            &--mob {
+                display: none;
+
+                @include tablets() {
+                    display: flex;
+                }
             }
         }
     }

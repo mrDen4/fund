@@ -2,14 +2,38 @@
     padding: 20px 0;
     width: 100%;
 
+    @include tablets() {
+        padding: 15px 0;
+    }
+
+    &--color {
+        background: linear-gradient(90.46deg, #CEFFB3 18.68%, #78FFD6 81.89%);
+    }
+
     .header__container {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        @include tablets() {
+            justify-content: center;
+        }
     }
 
     .header__nav {
         width: 40%;
+
+        @include tablets() {
+            display: none;
+        }
+    }
+
+    .header__logo {
+        height: 80px;
+
+        .logo__img {
+            height: 100%;
+        }
     }
 
     .nav__list {
@@ -25,6 +49,22 @@
                 text-decoration: underline;
                 color: #479BFF;
             }
+        }
+    }
+
+    .header__burger {
+        display: none;
+
+        @include tablets {
+            display: flex;
+            border: none;
+            background: none;
+            background: url('../images/burger.svg');
+            width: 24px;
+            height: 16px;
+            position: absolute;
+            right: 40px;
+            top: 40px;
         }
     }
 }

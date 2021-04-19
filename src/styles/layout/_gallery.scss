@@ -13,45 +13,16 @@
             height: 30px;
             width: 60%;
         }
-
-        .gallery__arrows {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-    
-            .arrow__btn {
-                background: none;
-                border: none;
-                width: 60px;
-                height: 60px;
-                cursor: pointer;
-                transition: .3s;
-                outline: none;
-    
-                &--right {
-                    background: url('../images/slider/arrow-right.svg') no-repeat center center;
-    
-                    &:hover {
-                        background: url('../images/slider/arrow-right-active.svg') no-repeat center center;
-                    }
-                }
-    
-                &--left {
-                    background: url('../images/slider/arrow-left.svg') no-repeat center center;
-                    margin-right: 50px;
-    
-                    &:hover {
-                        background: url('../images/slider/arrow-left-active.svg') no-repeat center center;
-                    }
-                }
-            }
-        }
     }
 
     .gallery__slider {
         width: 100%;
         margin-bottom: 150px;
         z-index: 2;
+
+        @include tablets() {
+            margin-bottom: 30px;
+        }
 
         .slider__slide {
             width: 100%;
@@ -62,13 +33,69 @@
         }
     }
 
+    .gallery__arrows {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablets() {
+            display: none;
+        }
+
+        &--mob {
+            display: none;
+
+            @include tablets() {
+                display: flex;
+                margin-bottom: 200px;
+            }
+        }
+
+        .arrow__btn {
+            background: none;
+            border: none;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: .3s;
+            outline: none;
+
+            &--right {
+                background: url('../images/slider/arrow-right.svg') no-repeat center center;
+
+                &:hover {
+                    background: url('../images/slider/arrow-right-active.svg') no-repeat center center;
+                }
+            }
+
+            &--left {
+                background: url('../images/slider/arrow-left.svg') no-repeat center center;
+                margin-right: 50px;
+
+                &:hover {
+                    background: url('../images/slider/arrow-left-active.svg') no-repeat center center;
+                }
+            }
+        }
+    }
+
     .gallery__team {
         display: flex;
         justify-content: space-between;
 
+        @include tablets() {
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .team__img {
             width: 30%;
             z-index: 2;
+
+            @include tablets() {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
 
         .team__content {
@@ -77,15 +104,22 @@
             flex-direction: column;
             justify-content: space-between;
 
+            @include tablets() {
+                width: 100%;
+                order: -1;
+            }
+
             .team__subtitle {
                 margin: 0 0 30px 0;
             }
 
-            .team__row {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+
+        }
+
+        .team__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
             .text__bold {
                 font-weight: bold;
@@ -95,8 +129,34 @@
                 color: $gray;
                 background: #FFEA47;
 
+                @include tablets() {
+                    display: none;
+                }
+
                 &:hover {
                     background: #F6A832;
+                }
+            }
+
+            @include tablets() {
+                display: none;
+            }
+
+            &--mob {
+                display: none;
+
+                .row__btn {
+                    background: $blue;
+                    color: #fff;
+                    display: flex;
+                    margin-top: 60px;
+                }
+
+                @include tablets() {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
                 }
             }
         }

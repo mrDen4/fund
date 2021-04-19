@@ -1,0 +1,102 @@
+.payment-option {
+    padding: 60px 0;
+
+    @include tablets() {
+        padding: 30px 0;
+    }
+
+    .payment-option__container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .payment-option__top {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+
+        .top__subtitle {
+            margin: 0 0 60px 0;
+            background: #fff;
+            z-index: 2;
+            margin: 0;
+            padding: 0 60px;
+
+            @include phones() {
+                padding: 0;
+            }
+        }
+
+        .top__line {
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(90.46deg, #CEFFB3 18.68%, #78FFD6 81.89%);
+            height: 2px;
+
+            @include phones() {
+                display: none;
+            }
+        }
+    }
+
+    .payment-option__content {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablets() {
+            flex-direction: column;
+        }
+    }
+
+    .content__text {
+        width: 50%;
+
+        @include tablets() {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .text__subtitle {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 0;
+        }
+
+        .text__text {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .text__link {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+
+    .content__btns {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        @include tablets() {
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .btns__btn {
+            padding: 0;
+            width: 320px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    }
+}
