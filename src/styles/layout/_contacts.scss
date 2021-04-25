@@ -1,0 +1,119 @@
+.contacts {
+    .contacts__top {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+
+        .top__subtitle {
+            margin: 0 0 60px 0;
+            background: #fff;
+            z-index: 2;
+            margin: 0;
+            padding: 0 60px;
+
+            @include phones() {
+                padding: 0;
+            }
+        }
+
+        .top__line {
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(90.46deg, #CEFFB3 18.68%, #78FFD6 81.89%);
+            height: 2px;
+
+            @include phones() {
+                display: none;
+            }
+        }
+    }
+
+    .contacts__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 75px;
+
+        @include tablets() {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .content__block {
+            display: flex;
+            flex-direction: column;
+
+            @include tablets() {
+                margin-bottom: 30px;
+            }
+        }
+
+        .block__name {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .block__text {
+            color: $gray;
+            font-weight: 600;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 0;
+            transition: .3s;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        .content__socials {
+            display: flex;
+        }
+
+        .socials__item {
+            width: 25px;
+            height: 25px;
+            transition: .3s;
+            margin-right: 30px;
+
+            &--vk {
+                background: url('../images/socials/vk.svg') center center no-repeat;
+
+                &:hover {
+                    background: url('../images/socials/vk-active.svg') center center no-repeat;
+                }
+            }
+
+            &--fb {
+                background: url('../images/socials/fb.svg') center center no-repeat;
+
+                &:hover {
+                    background: url('../images/socials/fb-active.svg') center center no-repeat;
+                }
+            }
+
+            &--inst {
+                background: url('../images/socials/inst.svg') center center no-repeat;
+
+                &:hover {
+                    background: url('../images/socials/inst-active.svg') center center no-repeat;
+                }
+            }
+
+        }
+    }
+
+    .contacts__map {
+        width: 100%;
+        height: 600px;
+
+        @include tablets() {
+            height: 300px;
+        }
+    }
+}

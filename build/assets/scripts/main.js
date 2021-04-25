@@ -14,6 +14,11 @@ $(document).ready(function () {
         nextArrow: $('.reviews .reviews__arrows .arrow__btn--right')
     });
 
+    $('.new .new__slider').slick({
+        prevArrow: $('.new .new__arrows .arrow__btn--left'),
+        nextArrow: $('.new .new__arrows .arrow__btn--right')
+    });
+
     //Scroll up
     (function($) {
         $(function() {
