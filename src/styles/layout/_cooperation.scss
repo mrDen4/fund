@@ -1,4 +1,11 @@
 .cooperation {
+    .cooperation__container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     .cooperation__top {
         position: relative;
         width: 100%;
@@ -29,6 +36,136 @@
             @include phones() {
                 display: none;
             }
+        }
+    }
+
+    .cooperation__content {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablets() {
+            width: 100%;
+            margin-bottom: 65px;
+        }
+
+        .content__socials {
+            display: flex;
+        }
+
+        .content__socials {
+            width: 100%;
+            display: flex;
+        }
+
+        .socials__soc {
+            width: 25px;
+            height: 25px;
+            margin-right: 30px;
+
+            &--twitter {
+                background: url('../images/socials/blue/twitter.svg') center center no-repeat;
+            }
+
+            &--instagram {
+                background: url('../images/socials/blue/instagram.svg') center center no-repeat;
+            }
+
+            &--whatsapp {
+                background: url('../images/socials/blue/whatsapp.svg') center center no-repeat;
+            }
+
+            &--facebook {
+                background: url('../images/socials/blue/facebook.svg') center center no-repeat;
+            }
+
+            &--google {
+                background: url('../images/socials/blue/google.svg') center center no-repeat;
+            }
+
+            &--messanger {
+                background: url('../images/socials/blue/messanger.svg') center center no-repeat;
+            }
+
+            &--youtube {
+                background: url('../images/socials/blue/youtube.svg') center center no-repeat;
+            }
+
+            &--vk {
+                background: url('../images/socials/blue/vk.svg') center center no-repeat;
+            }
+
+            &--telegram {
+                background: url('../images/socials/blue/telegram.svg') center center no-repeat;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .cooperation__form {
+        width: 40%;
+        display: flex;
+
+        @include phones() {
+            width: 100%;
+        }
+
+        .form__form {
+            display: flex;
+            flex-direction: column;
+            padding: 40px 30px 50px 30px;
+            box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.2);
+            border-radius: 7px;
+            width: 320px;
+            text-align: center;
+
+            @include phones() {
+                width: 100%;
+            }
+        }
+
+        .form__title {
+            font-weight: 400;
+            font-size: 16px;
+            margin: 0 0 30px 0;
+        }
+
+        .form__inp {
+            box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.2);
+            border: none;
+            border-radius: 4px;
+            padding: 11px 22px;
+            color: $gray-light;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .form__textarea {
+            box-shadow: 1px 2px 8px -1px rgba(0, 0, 0, 0.2);
+            border: none;
+            border-radius: 4px;
+            padding: 11px 22px;
+            color: $gray-light;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .form__btn {
+            box-shadow: 0px 5px 15px rgba(71, 155, 255, 0.3);
+            border-radius: 4px;
+            padding: 15px 0;
+        }
+
+        .form__text {
+            font-size: 12px;
+            color: $gray-light;
+        }
+
+        .form__link {
+            color: $blue;
         }
     }
 }

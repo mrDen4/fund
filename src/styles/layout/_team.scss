@@ -1,0 +1,122 @@
+.team {
+    .team__top {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 60px;
+
+        .top__subtitle {
+            margin: 0 0 60px 0;
+            background: #fff;
+            z-index: 2;
+            margin: 0;
+            padding: 0 60px;
+
+            @include phones() {
+                padding: 0;
+            }
+        }
+
+        .top__line {
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(90.46deg, #CEFFB3 18.68%, #78FFD6 81.89%);
+            height: 2px;
+
+            @include phones() {
+                display: none;
+            }
+        }
+    }
+
+    .team__content {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablets() {
+            flex-wrap: wrap;
+        }
+
+        .content__img-wrap {
+            width: 45%;
+
+            @include tablets() {
+                width: 100%;
+            }
+        }
+
+        .content__img {
+            display: none;
+
+            &--active {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .content__list {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+
+            @include tablets() {
+                width: 100%;
+            }
+        }
+
+        .list__item {
+            display: flex;
+            flex-direction: column;
+
+            .item__top {
+                display: flex;
+                justify-content: space-between;
+                transition: .3s;
+                cursor: pointer;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+    
+            .item__minus {
+                display: none;
+                font-size: 30px;
+            }
+
+            .item__text {
+                display: none;
+            }
+
+            .item__title {
+                font-family: 'Pacifico', cursive;
+                font-size: 26px;
+                line-height: 46px;
+                letter-spacing: 0.05em;
+            }
+
+            &--active {
+
+                .item__title {
+                    color: $blue;
+                }
+
+                .item__minus {
+                    display: flex;
+                    color: $blue;
+                }
+
+                .item__plus {
+                    display: none;
+                }
+
+                .item__text {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

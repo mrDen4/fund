@@ -38,4 +38,15 @@ $(document).ready(function () {
     $('.menu .menu__btn').on('click', function () {
         $('.menu').removeClass('menu--active');
     });
+
+
+    //Tabs on team
+    $('.team .item__top').on('click', function(e) {
+        if(this.parentElement.classList.contains(('list__item--active'))) {
+            this.parentElement.classList.remove('list__item--active');
+        } else {
+            $('.team .list__item').removeClass('list__item--active');
+            this.parentElement.classList.add('list__item--active');
+        }
+    });
 });
